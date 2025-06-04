@@ -1,0 +1,31 @@
+#chats-wrapper{
+  .md-editor{
+    @apply text-xs;
+    .md-editor-preview-wrapper{
+      @apply p-0;
+      p, ul, ol, li {
+        @apply text-sm mb-1 leading-6;
+      }
+      .md-editor-code{
+        @apply max-w-[calc(100vw-450px)]
+      }
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 2s ease infinite;
+}
