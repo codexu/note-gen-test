@@ -7,6 +7,8 @@ on:
 
 jobs:
   publish-tauri:
+    outputs:
+      appVersion: ${{ steps.set_output.outputs.appVersion }}
     permissions:
       contents: write
     strategy:
@@ -52,6 +54,7 @@ jobs:
         run: pnpm install
 
       - uses: tauri-apps/tauri-action@v0
+        id: tauri-action # 添加 id 以便后续引用
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
