@@ -91,6 +91,6 @@ jobs:
         - name: Send a request to UpgradeLink
           uses: toolsetlink/upgradelink-action@v4
           with:
-            source-url: 'https://github.com/codexu/note-gen/releases/download/note-gen-v${{ needs.publish-tauri.outputs.appVersion }}/latest.json'
+            source-url: 'https://github.com/codexu/note-gen-test/releases/download/note-gen-v${{ needs.publish-tauri.outputs.appVersion }}/latest.json'
             access-key: ${{ secrets.UPGRADE_LINK_ACCESS_KEY }}  # ACCESS_KEY  密钥key
             tauri-key: ${{ secrets.UPGRADE_LINK_TAURI_KEY }}    # TAURI_KEY tauri 应用唯一标识
